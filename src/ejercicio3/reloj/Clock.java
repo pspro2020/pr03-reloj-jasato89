@@ -20,9 +20,13 @@ public class Clock implements Runnable{
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
-                return;
+
+                Thread.currentThread().interrupt();
+
+
             }
         }
+
 
     }
 }
